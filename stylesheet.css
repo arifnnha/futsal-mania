@@ -77,12 +77,12 @@ a {
   display: inline-block;
   padding: 3px;
   margin: 5 10px;
+  gap: 50px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .header-menu a {
-  text-decoration: none;
   color: white;
 }
 
@@ -163,6 +163,7 @@ a {
   border-bottom: 2px solid #dee7ec;
   padding-bottom: 15px;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .contact label {
@@ -234,6 +235,8 @@ a {
   font-size: 16px;
 }
 
+/* page tambahan */
+
 .page {
   margin: 100px 80px;
   padding: 20px;
@@ -254,6 +257,10 @@ a {
 .page form .form-group {
   display: flex;
   flex-direction: column;
+}
+
+.page form .form-group textarea {
+  resize: vertical;
 }
 
 .page form .form-group input,
@@ -280,7 +287,6 @@ a {
 }
 
 .footer-logo a {
-  text-decoration: none;
   color: white;
   font-size: 32px;
   transition: all 0.3s ease-in-out;
@@ -312,4 +318,173 @@ a {
 
 .footer-list li a:hover {
   color: #1abc9c;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  /* * {
+    border: solid 1px red;
+  } */
+
+  body {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    height: 100ox;
+  }
+
+  .content-body {
+    margin: 10px 0;
+  }
+
+  .content-body h1 {
+    margin-top: 5vh;
+    font-size: 30px;
+  }
+
+  .content-body h1 span {
+    font-size: xx-large;
+  }
+
+  .content-body h2 {
+    font-size: x-large;
+  }
+
+  .lessons {
+    margin: 50px 20px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .lessons h3 {
+    font-size: large;
+    padding-top: 3px;
+  }
+
+  .lesson {
+    margin: 10px auto;
+    padding: 0;
+  }
+
+  .lesson img {
+    width: 100%;
+  }
+
+  .lesson p {
+    font-size: medium;
+  }
+
+  .contact {
+    margin: 50px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: large;
+    padding-top: 3px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .contact label,
+  .contact input,
+  .contact textarea {
+    width: 100%;
+  }
+
+  /* custom */
+  .title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    font-size: x-large;
+    margin-top: 20px;
+  }
+
+  .description {
+    line-height: 1.6;
+    font-size: medium;
+    margin-bottom: 15px;
+  }
+
+  .lesson-list li {
+    line-height: 1.6;
+    font-size: medium;
+  }
+
+  /* page tambahan */
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+  }
+
+  .page {
+    margin: 10px 20px;
+    padding: 0;
+    display: block;
+  }
+
+  .page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .page form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .page form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page form .form-group textarea {
+    resize: vertical;
+  }
+
+  .page form .form-group input,
+  .page form .form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .footer .footer-logo {
+    font-size: xx-large;
+  }
+
+  .footer .footer-list {
+    display: inline;
+  }
+
+  .footer .footer-list ul li a {
+    font-size: medium;
+  }
 }
